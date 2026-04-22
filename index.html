@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LinkedIn Job Search — Find Jobs First</title>
+<title>LinkedIn Job Search</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -147,7 +147,8 @@ body {
   right: 0.875rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 0; height: 0;
+  width: 0;
+  height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 5px solid var(--color-text-muted);
@@ -230,21 +231,26 @@ body {
 }
 
 .quick-card-icon {
-  width: 32px; height: 32px;
+  width: 32px;
+  height: 32px;
   background: var(--color-primary-hl);
   border-radius: var(--radius-md);
-  display: flex; align-items: center; justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--color-primary);
   flex-shrink: 0;
 }
 
 .quick-card-info { min-width: 0; }
+
 .quick-card-label {
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.2;
 }
+
 .quick-card-desc {
   font-size: 0.6875rem;
   color: var(--color-text-muted);
@@ -274,6 +280,7 @@ body {
   transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition), transform var(--transition);
   white-space: nowrap;
 }
+
 .btn:active { transform: scale(0.97); }
 
 .btn-primary {
@@ -281,6 +288,7 @@ body {
   color: #fff;
   box-shadow: 0 3px 12px oklch(from var(--color-primary) l c h / 0.3);
 }
+
 .btn-primary:hover {
   background: var(--color-primary-hover);
   box-shadow: 0 5px 18px oklch(from var(--color-primary) l c h / 0.4);
@@ -292,6 +300,7 @@ body {
   color: var(--color-text-muted);
   border-color: var(--color-border);
 }
+
 .btn-ghost:hover {
   background: var(--color-surface-offset);
   color: var(--color-text);
@@ -331,15 +340,27 @@ body {
   background: transparent;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  width: 30px; height: 30px;
-  display: flex; align-items: center; justify-content: center;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: var(--color-text-muted);
   flex-shrink: 0;
   transition: background var(--transition), color var(--transition);
 }
-.url-copy-btn:hover { background: var(--color-surface-offset); color: var(--color-text); }
-.url-copy-btn.copied { background: oklch(0.43 0.12 145 / 0.15); color: #437a22; border-color: transparent; }
+
+.url-copy-btn:hover {
+  background: var(--color-surface-offset);
+  color: var(--color-text);
+}
+
+.url-copy-btn.copied {
+  background: oklch(0.43 0.12 145 / 0.15);
+  color: #437a22;
+  border-color: transparent;
+}
 
 .footer {
   border-top: 1px solid var(--color-border);
@@ -375,12 +396,16 @@ body {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
-  width: 36px; height: 36px;
-  display: flex; align-items: center; justify-content: center;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: var(--color-text-muted);
   transition: background var(--transition), color var(--transition);
 }
+
 .theme-toggle-main:hover {
   background: var(--color-surface-offset);
   color: var(--color-text);
@@ -578,7 +603,7 @@ body {
 </section>
 
 <footer class="footer">
-  <span>Built by Rejaul Islam &mdash; Biotech &amp; Pharma job search</span>
+  <span>Built for Rejaul Islam &mdash; Biotech &amp; Pharma job search</span>
   <div class="footer-note">
     <span class="footer-pill">
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -651,6 +676,8 @@ function copyURL() {
       btn.classList.remove("copied");
       btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
     }, 1800);
+  }).catch(() => {
+    alert("Could not copy the URL. Please copy it manually.");
   });
 }
 
@@ -687,21 +714,27 @@ document.querySelectorAll("input, select").forEach(el => {
 
 (function() {
   const root = document.documentElement;
-  const btn  = document.querySelector("[data-theme-toggle]");
-  let theme  = "dark";
-  root.setAttribute("data-theme", theme);
+  const btn = document.querySelector("[data-theme-toggle]");
+  const savedTheme = localStorage.getItem("theme");
+  let theme = savedTheme || "dark";
 
-  function setIcon(t) {
-    btn.innerHTML = t === "dark"
+  function setIcon(currentTheme) {
+    btn.innerHTML = currentTheme === "dark"
       ? `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`
       : `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
   }
 
-  setIcon(theme);
-  btn.addEventListener("click", () => {
-    theme = theme === "dark" ? "light" : "dark";
+  function applyTheme(newTheme) {
+    theme = newTheme;
     root.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
     setIcon(theme);
+  }
+
+  applyTheme(theme);
+
+  btn.addEventListener("click", () => {
+    applyTheme(theme === "dark" ? "light" : "dark");
   });
 })();
 
