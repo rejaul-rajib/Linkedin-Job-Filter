@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Job Filter</title>
+<script type="text/javascript" nonce="b97daaa3eaf44369bc529f23136" src="//local.adguard.org?ts=1776878208823&amp;type=content-script&amp;dmn=ppl-ai-code-interpreter-files.s3.amazonaws.com&amp;url=https%3A%2F%2Fppl-ai-code-interpreter-files.s3.amazonaws.com%2Fweb%2Fdirect-files%2Ffd400eeb52f42eeddd971b36a1653ecd%2F819bae9e-dd09-4b46-b0a6-a10e08327ab2%2F0eb54730.html%3Fresponse-content-disposition%3Dattachment%253B%2520filename%253D%2522index.html%2522%253B%2520filename%252A%253DUTF-8%2527%2527index.html%26AWSAccessKeyId%3DASIA2F3EMEYEZ6FNBWWP%26Signature%3DhP1Mtfwn9Utuv4UvhXWOi1jZAO0%253D%26x-amz-security-token%3DIQoJb3JpZ2luX2VjEIv%252F%252F%252F%252F%252F%252F%252F%252F%252F%252FwEaCXVzLWVhc3QtMSJHMEUCIFxyhIHxviCj0F1YFQMHovZMgq%252FrU3yVwJ5aykw6lA%252BUAiEA4kRmDUX5Jx8svoB37eBxg%252BLNm3z%252BpNQ9G25W17PRtrAq8wQIUxABGgw2OTk3NTMzMDk3MDUiDBEc06UDN573pBiE7irQBLe6n16pYExIblmXnaUK7yPcXrXLiKcY2wLifqpkw92GmwJf6LgFEiuO7C4Xe7m0Jw82fXtKsCBCAWCW6ZxWUQ238LtdK0b8FEMGhhxJ9vfVAJP8wY%252FNJ90t7mMpH1rNhT2L2EHel98t07AnyTf7LqT8vM5GOFMk5Al86zTtDVdou3yihRb0Yzcxs7hdplPi96Tfjkb%252B7q2O35PQZ0hHiBWmqGSZi2ei%252FNUzolVVwgjCgdir2ZjFd0kYmhpK5jF7U8JR4ryGutW%252BEnoBUliZn00kMsKUlhp%252FAXtqAzpMm7Zdu8erTweSL3ylngusmAB5x3fUwz9Je34mLeua%252FvBhw3QR1SHBY9WexUgLZHUIWxwEWLkKLiDrxhdbuP%252FE3QJ%252FMaTwDLqEK3CQtmIWxn4RzMdCjKL9VWbsBJ1KZmJL7hVYziAUrzfvysz%252FA8W6hvSM8QmUIWADfpwDzz7oocf736lGHAIBvFO5PKqxKava2vS22rZOj%252BQ8LSm1XPRy4YYDWBfdmcZq78ISGzWNy73taDQEgkgCONv4SdOFuAZqVbuk79enxbkVytIYLTy%252BznxpptUs4f9UbGZygOEfbdCmuQ7CMWRPaGBNNP%252F%252BwnVyMMkYReYBlgDQymX%252B0Qg527Qu7ALc9ylgGQtC6wgEaHdSbgjkOrbxRyuF0IoboHIA10UriIHw9eluIw9NvgMRvhisAso5arpETDw%252F8EXkTbJeNBjGmzxFXTNw3Kv867Y9eI6D1hMNgHSniyXIm5WKAuG886HzTrZi%252FffJMosa%252FrnA4cUw6pykzwY6mAFR9JHxmF6A%252B1f68XUa8NG59Rch3RaYD8K8S4zO2ZZv%252Bfv3hqMsq78U%252BvxbsYvWsMeihLiWSRZTX1jsNe0IO8GjAkZJ4NcUMav6y2L%252BXvlX7j3vBDsTDim46KIaAmVfVqi3FD19FbgaO%252B49HM18fQ6y8Bq8%252BKOQjqYWP5I17B8yKvSxXG76RziggglEKwqEvZpjoAn9J9FFEQ%253D%253D%26Expires%3D1776883001&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root, [data-theme="light"] {
+    --color-bg: #f7f6f2;
+    --color-surface: #f9f8f5;
+    --color-surface-2: #fbfbf9;
+    --color-surface-offset: #edeae5;
+    --color-border: #d4d1ca;
+    --color-text: #28251d;
+    --color-text-muted: #7a7974;
+    --color-text-faint: #bab9b4;
+    --color-primary: #01696f;
+    --color-primary-hover: #0c4e54;
+    --color-primary-highlight: #cedcd8;
+    --color-success: #437a22;
+    --color-success-highlight: #d4dfcc;
+    --shadow-sm: 0 1px 3px oklch(0.2 0.01 80 / 0.07);
+    --shadow-md: 0 4px 16px oklch(0.2 0.01 80 / 0.09);
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-full: 9999px;
+    --font-body: "Inter", "Helvetica Neue", sans-serif;
+    --transition: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  [data-theme="dark"] {
+    --color-bg: #141312;
+    --color-surface: #1c1b19;
+    --color-surface-2: #232220;
+    --color-surface-offset: #2a2927;
+    --color-border: #363432;
+    --color-text: #cdccca;
+    --color-text-muted: #797876;
+    --color-text-faint: #4f4e4c;
+    --color-primary: #4f98a3;
+    --color-primary-hover: #3a818b;
+    --color-primary-highlight: #1f3336;
+    --color-success: #6daa45;
+    --color-success-highlight: #1e3020;
+    --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.25);
+    --shadow-md: 0 4px 16px oklch(0 0 0 / 0.35);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100dvh;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.6;
+    transition: background var(--transition), color var(--transition);
+  }
+
+  /* Layout */
+  .app {
+    max-width: 860px;
+    margin-inline: auto;
+    padding: clamp(1.5rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--color-primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-icon svg { color: #fff; }
+
+  .logo-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.2;
+  }
+
+  .logo-sub {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
+  }
+
+  .theme-toggle {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
+    flex-shrink: 0;
+  }
+
+  .theme-toggle:hover {
+    background: var(--color-surface-offset);
+    color: var(--color-text);
+  }
+
+  /* Keyword bar */
+  .keyword-bar {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .keyword-bar label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin-bottom: 0.625rem;
+  }
+
+  .keyword-input-row {
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+  }
+
+  .keyword-input {
+    flex: 1;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 0.625rem 0.875rem;
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    transition: border-color var(--transition), box-shadow var(--transition);
+    min-width: 0;
+  }
+
+  .keyword-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px oklch(from var(--color-primary) l c h / 0.15);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: var(--font-body);
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .btn:active { transform: scale(0.97); }
+
+  .btn-primary {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+  }
+  .btn-primary:hover { background: var(--color-primary-hover); border-color: var(--color-primary-hover); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-text-muted);
+    border-color: var(--color-border);
+  }
+  .btn-ghost:hover {
+    background: var(--color-surface-offset);
+    color: var(--color-text);
+  }
+
+  .btn-success {
+    background: var(--color-success-highlight);
+    color: var(--color-success);
+    border-color: transparent;
+  }
+
+  /* Open all */
+  .open-all-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .section-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+  }
+
+  /* Filter cards */
+  .filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .filter-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
+  }
+
+  .filter-card:hover {
+    background: var(--color-surface-2);
+    box-shadow: var(--shadow-md);
+    border-color: oklch(from var(--color-primary) l c h / 0.3);
+  }
+
+  .filter-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    min-width: 0;
+  }
+
+  .time-badge {
+    background: var(--color-primary-highlight);
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.625rem;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .filter-info { min-width: 0; }
+
+  .filter-label {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.3;
+  }
+
+  .filter-url {
+    font-size: 0.75rem;
+    color: var(--color-text-faint);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 420px;
+    font-family: "SF Mono", "Fira Code", monospace;
+    margin-top: 0.2rem;
+  }
+
+  .filter-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .icon-btn {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
+    flex-shrink: 0;
+  }
+
+  .icon-btn:hover {
+    background: var(--color-surface-offset);
+    color: var(--color-text);
+  }
+
+  .icon-btn.copied {
+    background: var(--color-success-highlight);
+    color: var(--color-success);
+    border-color: transparent;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.75rem;
+    color: var(--color-text-faint);
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .filter-card {
+      grid-template-columns: 1fr;
+    }
+    .filter-actions {
+      justify-content: flex-end;
+    }
+    .filter-url { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-text">LinkedIn Job Filter</div>
+        <div class="logo-sub">Quick-access time filters</div>
+      </div>
+    </div>
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Keyword bar -->
+  <div class="keyword-bar">
+    <label for="keyword-input">Search Keyword</label>
+    <div class="keyword-input-row">
+      <input
+        id="keyword-input"
+        class="keyword-input"
+        type="text"
+        value="Quality Control Chemist"
+        placeholder="e.g. Scientist, Analytical Development"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button class="btn btn-primary" onclick="applyKeyword()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        Apply
+      </button>
+    </div>
+  </div>
+
+  <!-- Open all + section label -->
+  <div class="open-all-bar">
+    <span class="section-title">Time Filters</span>
+    <button class="btn btn-ghost" onclick="openAll()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      Open All
+    </button>
+  </div>
+
+  <!-- Filter cards -->
+  <div class="filter-list" id="filter-list"></div>
+
+  <footer class="footer">
+    Built for Rejaul Islam &mdash; LinkedIn job search workflow
+  </footer>
+
+</div>
+
+<script>
+  const FILTERS = [
+    { label: "Last 1 Hour",  seconds: 3600   },
+    { label: "Last 2 Hours", seconds: 7200   },
+    { label: "Last 3 Hours", seconds: 10800  },
+    { label: "Last 6 Hours", seconds: 21600  },
+    { label: "Last 24 Hours",seconds: 86400  },
+    { label: "Last 3 Days",  seconds: 259200 },
+  ];
+
+  function buildURL(keyword, seconds) {
+    const encoded = encodeURIComponent(keyword.trim() || "Quality Control Chemist");
+    return `https://www.linkedin.com/jobs/search/?f_TPR=r${seconds}&keywords=${encoded}&sortBy=R`;
+  }
+
+  function getKeyword() {
+    return document.getElementById("keyword-input").value.trim() || "Quality Control Chemist";
+  }
+
+  function renderCards() {
+    const kw = getKeyword();
+    const list = document.getElementById("filter-list");
+    list.innerHTML = "";
+
+    FILTERS.forEach((f, i) => {
+      const url = buildURL(kw, f.seconds);
+
+      const card = document.createElement("div");
+      card.className = "filter-card";
+      card.innerHTML = `
+        <div class="filter-meta">
+          <span class="time-badge">${f.label}</span>
+          <div class="filter-info">
+            <div class="filter-label">${f.label} &mdash; ${kw}</div>
+            <div class="filter-url">${url}</div>
+          </div>
+        </div>
+        <div class="filter-actions">
+          <button class="icon-btn" id="copy-btn-${i}" onclick="copyURL(${i}, '${url.replace(/'/g,"\'")}', this)" title="Copy URL" aria-label="Copy URL">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
+          <a class="icon-btn" href="${url}" target="_blank" rel="noopener noreferrer" title="Open on LinkedIn" aria-label="Open on LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+        </div>
+      `;
+      list.appendChild(card);
+    });
+  }
+
+  function applyKeyword() {
+    renderCards();
+  }
+
+  document.getElementById("keyword-input").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") applyKeyword();
+  });
+
+  function copyURL(index, url, btn) {
+    navigator.clipboard.writeText(url).then(() => {
+      btn.classList.add("copied");
+      btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+      setTimeout(() => {
+        btn.classList.remove("copied");
+        btn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
+      }, 1800);
+    });
+  }
+
+  function openAll() {
+    const kw = getKeyword();
+    FILTERS.forEach(f => {
+      window.open(buildURL(kw, f.seconds), "_blank", "noopener,noreferrer");
+    });
+  }
+
+  // Theme toggle
+  (function() {
+    const root = document.documentElement;
+    const btn = document.querySelector("[data-theme-toggle]");
+    let theme = "dark";
+    root.setAttribute("data-theme", theme);
+
+    function setIcon(t) {
+      btn.innerHTML = t === "dark"
+        ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`
+        : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+    }
+
+    setIcon(theme);
+
+    btn.addEventListener("click", () => {
+      theme = theme === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", theme);
+      setIcon(theme);
+    });
+  })();
+
+  // Initial render
+  renderCards();
+</script>
+
+</body>
+</html>
