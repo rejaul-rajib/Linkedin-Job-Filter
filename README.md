@@ -1,5 +1,8 @@
 # LinkedIn Job Filter
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Live Demo](https://img.shields.io/badge/live%20demo-GitHub%20Pages-2ea44f.svg)](https://rejaul-rajib.github.io/linkedin-job-filter/)
+
 A single-file HTML tool for building targeted LinkedIn job search URLs — no login, no tracking, no dependencies.
 
 ## Features
@@ -15,8 +18,9 @@ A single-file HTML tool for building targeted LinkedIn job search URLs — no lo
 
 ### GitHub Pages
 1. Upload `index.html` to your repo.
-2. Go to **Settings → Pages → Source: `main` branch, `/ (root)`**.
-3. Open the live site at `https://yourusername.github.io/linkedin-job-filter/`.
+2. Go to **Settings → Pages**.
+3. Set **Source** to `main` branch and `/ (root)`.
+4. Open the live site at `https://rejaul-rajib.github.io/linkedin-job-filter/`.
 
 ### Local
 Open `index.html` in any browser. No server needed.
@@ -42,6 +46,7 @@ To change the default date filter, find `<select id="sel-time">` and move `selec
 | `r2592000` | Past month |
 
 Other parameters:
+
 - `f_WT` — Work model (1=On-site, 2=Remote, 3=Hybrid)
 - `f_JT` — Job type (F=Full-time, P=Part-time, C=Contract, T=Temporary, I=Internship)
 - `f_E` — Experience level (1=Internship … 6=Executive)
@@ -49,5 +54,15 @@ Other parameters:
 - `sortBy` — R=Relevance, DD=Date posted
 
 > You must have a LinkedIn account and be signed in to view results.
+
+## Bug reports
+
+If you find a bug, please report it here:
+
+[Report a bug](https://github.com/rejaul-rajib/linkedin-job-filter/issues/new)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 Built by Rejaul Islam for biotech/pharma job searches.
