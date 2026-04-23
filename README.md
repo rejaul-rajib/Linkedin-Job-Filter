@@ -20,7 +20,7 @@ A single-file HTML tool for building targeted LinkedIn job search URLs — no lo
 1. Upload `index.html` to your repo.
 2. Go to **Settings → Pages**.
 3. Set **Source** to `main` branch and `/ (root)`.
-4. Open the live site at `https://rejaul-rajib.github.io/linkedin-job-filter/`.
+4. Open the live site at `https://rejaul-rajib.github.io/Linkedin-Job-Filter/`.
 
 ### Local
 Open `index.html` in any browser. No server needed.
