@@ -1,7 +1,7 @@
 # LinkedIn Job Filter
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![Live Demo](https://img.shields.io/badge/live%20demo-GitHub%20Pages-2ea44f.svg)](https://rejaul-rajib.github.io/linkedin-job-filter/)
+[![Live Demo](https://img.shields.io/badge/live%20demo-GitHub%20Pages-2ea44f.svg)](https://rejaul-rajib.github.io/linkedin-filters/)
 
 A single-file HTML tool for building targeted LinkedIn job search URLs — no login, no tracking, no dependencies.
 
